@@ -1,32 +1,28 @@
 // 1. Write a function which accepts an argument and returns
 //  the type of the argument.
 
-// function fruit() {
-//   let fruit = 0;
-//   return fruit;
+// function whatType(parameter) {
+//   return typeof parameter;
 // }
-// console.log(typeof fruit);
+// console.log(whatType("hello"));
+// console.log(whatType(54));
 
-// // function myFunction(p1, p2) {
-// //   return p1 * p2; // The function returns the product of p1 and p2
-// // }
-
-// // myFunction(3, 5);
-// // console.log(myFunction);
+// -----------------------------------------------------
 
 // // 2. Write a function that accept two integers and
 // // returns the larger one.
 
 // function largets(x, y) {
 //   if (x > y) {
-//     console.log(x);
-//   } else y > x;
-//   {
-//     console.log(y);
+//     return x;
+//   } else  {
+//     return y;
 //   }
 // }
 
-// largets(8, 4);
+// console.log(largets(8, 4));
+
+// -----------------------------------------------------
 
 // 3. Write a function that show how old a dog in
 // human years, it should take one argument - puppy’s
@@ -34,12 +30,11 @@
 // should return a string like “Your doggie is NN
 // years old in dog years!”
 
-// 4. Write a function that accepts a string as a
-// parameter and counts the number of vowels within
-// the string.
-// Each function has to return a value, do not
-// display a result inside a function.
-// :+1:1
+// function dogAge(years) {
+//   let dogYears = years * 7;
+//   return `Your dog is ${dogYears}`;
+// }
+// console.log(dogAge(4));
 
 // ------------------Part2
 
@@ -66,9 +61,9 @@
 // minutes 43 seconds returns 5145 seconds.
 
 // function count(hours, minutes, seconds) {
-//   //   let hour = 3600;
-//   //   let minute = 60;
-//   //   let second = 1;
+//   //   1 hour = 3600s;
+//   //   1 minute = 60s;
+//   //   1 second = 1s;
 
 //   let result = hours * 3600 + minutes * 60 + seconds;
 
@@ -84,6 +79,22 @@
 // of the specified character within the string. For example, there
 // are 2 occurrences of a character “o” in the string “Hello world”.
 
+word = prompt("type a word");
+letter = prompt("count this letter in my sentens");
+function howManyTime(word, letter) {
+  let times = 0;
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] === letter) {
+      times += 1;
+    }
+  }
+  return times;
+}
+let times = howManyTime(word, letter);
+console.log(times);
+
+// inputstring = +prompt("wright a sentens");
+// inputCharacter = +prompt("wright a character");
 // function countOccurrences(inputString, inputCharacter) {
 //   let sum = 0;
 //   for (let i = 0; i < inputString.length; i++) {
