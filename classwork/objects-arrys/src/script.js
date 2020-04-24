@@ -28,19 +28,19 @@
 // Display the recipe information on the webpage. Use heading for the title.
 // Use paragraphs for other info. For example:
 
-Mole;
-Servings: 2;
-Ingredients: cumin, cocoa, cinnamon;
+// Mole;
+// Servings: 2;
+// Ingredients: cumin, cocoa, cinnamon;
 
-let recipe = {
-  title: "Mole",
-  servings: 2,
-  ingredients: "cumin, cocoa, cinnamon",
-};
+// let recipe = {
+//   title: "Mole",
+//   servings: 2,
+//   ingredients: "cumin, cocoa, cinnamon",
+// };
 
-document.write(`<h1>${recipe.title}</h1>`);
-document.write(`<p> Servings: ${recipe.servings}</p>`);
-document.write(`<p> Ingredients: ${recipe.ingredients}</p>`);
+// document.write(`<h1>${recipe.title}</h1>`);
+// document.write(`<p> Servings: ${recipe.servings}</p>`);
+// document.write(`<p> Ingredients: ${recipe.ingredients}</p>`);
 
 // _________________________________________________________________
 
