@@ -1,0 +1,38 @@
+#myButton {
+  font-size: 28px;
+  margin: 50px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #df949466;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #df5252;
+  width: 80%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+}
+
+#myBtn:hover,
+.close:hover,
+.close:focus {
+  color: #d44343;
+  cursor: pointer;
+}
