@@ -38,6 +38,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  cursor: pointer;
+}
+
+.box:hover {
+  -webkit-box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.45);
+          box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.45);
 }
 
 h2 {
@@ -79,7 +85,9 @@ p {
           margin-inline-start: 0px;
   -webkit-margin-end: 0px;
           margin-inline-end: 0px;
-  margin: 20px 15px;
+  padding: 20px 15px;
+  -webkit-box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.45);
+          box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.45);
 }
 
 .box--music {
