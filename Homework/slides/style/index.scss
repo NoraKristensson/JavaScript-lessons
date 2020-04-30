@@ -1,0 +1,17 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links {
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
