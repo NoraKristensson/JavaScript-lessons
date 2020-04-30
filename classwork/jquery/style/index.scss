@@ -1,0 +1,63 @@
+$background: #f6704b;
+$locationColor: #620808;
+$musicColor: #a53f3f;
+$notesColor: #f4ce74;
+$booksColor: #ffe9c1;
+$tendancesColor: #d5441c;
+
+@font-face {
+  font-family: customFont;
+  src: url(../font/JF-Flat-regular.eot);
+  src: url(../font/JF-Flat-regular.svg);
+  src: url(../font/JF-Flat-regular.ttf);
+  src: url(../font/JF-Flat-regular.woff);
+}
+
+body {
+  font-family: "customFont";
+}
+
+.screen {
+  background-color: $background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 380px;
+}
+
+.location {
+  background-color: $locationColor;
+  color: $booksColor;
+}
+
+p {
+  display: none;
+}
+
+.music {
+  background-color: $musicColor;
+  color: $notesColor;
+}
+
+.notes {
+  background-color: $notesColor;
+  color: $locationColor;
+}
+
+.books {
+  background-color: $booksColor;
+  color: $locationColor;
+}
+
+.tendances {
+  background-color: $tendancesColor;
+  color: $booksColor;
+}
+
+img {
+  width: 58px;
+  height: 58px;
+}

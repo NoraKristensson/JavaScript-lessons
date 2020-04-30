@@ -1,0 +1,63 @@
+@font-face {
+  font-family: customFont;
+  src: url(../font/JF-Flat-regular.eot);
+  src: url(../font/JF-Flat-regular.svg);
+  src: url(../font/JF-Flat-regular.ttf);
+  src: url(../font/JF-Flat-regular.woff);
+}
+
+body {
+  font-family: "customFont";
+}
+
+.screen {
+  background-color: #f6704b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  width: 380px;
+}
+
+.location {
+  background-color: #620808;
+  color: #ffe9c1;
+}
+
+p {
+  display: none;
+}
+
+.music {
+  background-color: #a53f3f;
+  color: #f4ce74;
+}
+
+.notes {
+  background-color: #f4ce74;
+  color: #620808;
+}
+
+.books {
+  background-color: #ffe9c1;
+  color: #620808;
+}
+
+.tendances {
+  background-color: #d5441c;
+  color: #ffe9c1;
+}
+
+img {
+  width: 58px;
+  height: 58px;
+}
+/*# sourceMappingURL=index.css.map */
