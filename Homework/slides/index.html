@@ -1,29 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>slides</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style/index.css" />
-    <link rel="icon" type="png" href="style/covid-19.png" />
-  </head>
-  <body>
-    <section class="navigation">
-      <h3>Intro</h3>
-      <div>
-        <ul class="links">
-          <li>Home</li>
-          <li>About</li>
-          <li>Services</li>
-          <li>Works</li>
-          <li>Events</li>
-          <li>Contacts</li>
-        </ul>
-      </div>
-    </section>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>slides</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style/index.css" />
+		<link rel="icon" type="png" href="img/pig.png" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link rel="stylesheet" type="text/css" href="slick/slick.css" />
+		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+	</head>
+	<body>
+		<main class="screen">
+			<header class="navigation">
+				<h2>Intro</h2>
+
+				<div>
+					<ul class="links" id="myTopnav">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="">Works</a></li>
+						<li><a href="#">Events</a></li>
+						<li><a href="#">Contacts</a></li>
+						<li>
+							<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+								<i class="fa fa-bars"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</header>
+			<section>
+				<div class="slider-container">
+					<div class="content">
+						<h1>We craft meaningful digital ex- periences</h1>
+						<p>
+							Creating products and services that transform organiza- tions for
+							the digital economy
+						</p>
+						<button>SEE OUR WORK</button>
+					</div>
+
+					<div class="daniel">
+						<h3>Daniel 5 years old</h3>
+						<img class="pic" src="img/daniel.jpeg" alt="my son Daniel" />
+					</div>
+
+					<div class="noah">
+						<h3>Noah 3 years old</h3>
+						<img class="pic" src="img/noah.jpg" alt="my son Noah" />
+					</div>
+				</div>
+			</section>
+		</main>
+		<script src="src/jquary.js"></script>
+		<script
+			type="text/javascript"
+			src="https://code.jquery.com/jquery-1.11.0.min.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+		></script>
+		<script type="text/javascript" src="slick/slick.min.js"></script>
+		<script src="src/scripts.js"></script>
+	</body>
 </html>

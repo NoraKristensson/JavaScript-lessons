@@ -1,17 +1,203 @@
-body {
-  background-color: black;
+@mixin font {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
   color: white;
 }
 
+@mixin links {
+  @include font;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+@mixin maintext {
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+  font-size: 80px;
+  line-height: 95px;
+  text-align: center;
+}
+
+@mixin text {
+  @include font;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 48px;
+}
+
+@mixin button-text {
+  @include font;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+}
+
+@mixin flex($justify, $align) {
+  justify-content: $justify;
+  align-items: $align;
+  display: flex;
+}
+
+body {
+  background-color: black;
+  @include font;
+  padding: 15px 30px;
+}
+
+.screen {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+// ------------------------------------------header
 .navigation {
   display: flex;
   justify-content: space-between;
 }
 
-.links {
-  display: flex;
+.logo {
+  width: 86px;
+  height: 49px;
 }
 
-li {
+h2 {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 49px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+.links {
+  display: flex;
+  overflow: hidden;
   list-style: none;
+  min-width: 454px;
+  height: auto;
+  justify-content: space-between;
+  margin-block-end: 0px;
+  padding-inline-start: 0px;
+}
+
+.links a {
+  display: block;
+  // justify-content: flex-start;
+  display: flex;
+  text-decoration: none;
+  cursor: pointer;
+  @include links;
+}
+.links a:hover {
+  color: #eecd31;
+  transform: scale(1.1);
+}
+
+.links .icon {
+  display: none;
+  @include links;
+  color: white;
+}
+// -------------------------------------------slider
+section {
+  margin: auto;
+  @include flex(center, center);
+  max-width: 1107px;
+  box-sizing: border-box;
+}
+
+.slider-container {
+  margin: auto;
+  @include flex(center, center);
+  max-width: 1107px;
+  box-sizing: border-box;
+}
+
+.content {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+h1 {
+  @include maintext;
+}
+
+p {
+  @include text;
+}
+
+button {
+  background: #eecd31;
+  border-radius: 25px;
+  width: 184px;
+  height: 57px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button:hover {
+  // box-shadow: inset 1px 9px 35px 17px rgba(0, 0, 0, 0.66);
+  box-shadow: 0px 0px 17px 17px rgba(74, 74, 74, 1);
+  // transform: scale(1.1);
+}
+
+.daniel {
+  text-align: center;
+}
+
+.noah {
+  text-align: center;
+}
+
+.pic {
+  max-width: 1107px;
+  max-height: 400px;
+  margin: auto;
+}
+
+// .slick-prev::before {
+//   color: black;
+// }
+
+// .slick-dot::before {
+//   color: white;
+// }
+.slick-dots li.slick-active button:before {
+  color: white;
+  opacity: 0.75;
+}
+// -------------------------------------------responsive
+
+@media screen and (max-width: 600px) {
+  .links a {
+    display: none;
+  }
+  .links a.icon {
+    display: flex;
+    justify-content: flex-start;
+    font-size: large;
+  }
+
+  .links.responsive {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .links.responsive .icon {
+    position: absolute;
+    width: 50px;
+    right: 0;
+    top: 0;
+  }
+  .links.responsive a {
+    float: none;
+    display: block;
+    display: flex;
+    justify-content: center;
+  }
 }
