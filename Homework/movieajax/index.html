@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Search for a movie</h1>
+      <form id="movieForm" action="">
+        <div>
+          <label for="movie">Movie name</label>
+          <input
+            type="text"
+            placeholder="Type a movie title"
+            class="movieForm"
+            id="movie"
+            name="search"
+          />
+        </div>
+        <button class="button">Search</button>
+      </form>
+      <div class="info-container">
+        <div id="resultText"></div>
+        <div id="resultImg"></div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="src/scripts.js"></script>
+  </body>
+</html>

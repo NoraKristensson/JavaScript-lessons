@@ -1,0 +1,68 @@
+body {
+  background-color: lightgoldenrodyellow;
+}
+
+.container {
+  margin: auto;
+  max-width: 90%;
+  font-family: "Quicksand", sans-serif;
+}
+
+.title,
+#movieForm {
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
+.movieForm {
+  margin: 10px;
+  outline: none;
+  width: 60%;
+  height: auto;
+  line-height: 30px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.button {
+  width: 30%;
+  min-height: 40px;
+
+  margin: 10px;
+  outline: none;
+  background-color: pink;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: rgb(158, 118, 125);
+  border-radius: 10px;
+}
+
+.info-container {
+  margin: auto;
+  display: flex;
+
+  justify-content: space-around;
+}
+
+h2 {
+  color: red;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+span {
+  color: green;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+#resultText {
+  width: 50%;
+}
