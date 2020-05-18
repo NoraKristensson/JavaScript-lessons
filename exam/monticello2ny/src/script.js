@@ -1,24 +1,16 @@
-// $(document).ready(function () {
-// 	$('.slick-content').slick({
-// 		slidesToScroll: 1,
-// 		arrows: false,
-// 		dots: true,
-// 		vertical: true,
-// 		verticalSwiping: true,
-// 		infinite: false,
-// 	});
-// });
-
-// $(document).ready(function () {
-// 	$('.news-slider').slick({
-// 		// infinite: false,
-// 		slidesToShow: 3,
-// 		slidesToScroll: 3,
-// 		dots: true,
-// 		arrows: true,
-// 		// variableWidth: true,
-// 	});
-// });
+$(document).ready(function () {
+  $(".slick-content").slick({
+    // infinite: false,
+    // autoplay: true,
+    autoplaySpeed: 4000,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false,
+    // vertical: true,
+    verticalSwiping: true,
+    dotsClass: $(this).toggleClass("rotate-90"),
+  });
+});
 
 $(document).ready(function () {
   $(".news-slider").slick({
@@ -26,26 +18,18 @@ $(document).ready(function () {
     slidesToScroll: 1,
     arrows: true,
     dots: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    vertical: true,
-    verticalSwiping: true,
+    // autoplay: true,
+    autoplaySpeed: 4000,
+
     infinite: false,
+    prevArrow:
+      '<span class="slide-arrow prev-arrow"><i class="fas fa-angle-left"></i></span>',
+    nextArrow:
+      '<span class="slide-arrow next-arrow"><i class="fas fa-angle-right"></i></span>',
   });
 });
 
-$(document).ready(function () {
-  $(".slick-content").slick({
-    infinite: false,
-
-    slidesToScroll: 1,
-    dots: true,
-    arrows: true,
-    // variableWidth: true,
-  });
-});
-
-//  ------------------------------------- smoothe scroll
+//  ----------------------------------------------------------------------------------------- smoothe scroll
 $(".linkname").on("click", function (e) {
   e.preventDefault();
   $("html, body").animate(
@@ -57,7 +41,7 @@ $(".linkname").on("click", function (e) {
   );
 });
 
-// ----------------------------------------------------------------------------google maps
+// ---------------------------------------------------------------------------------------------google maps
 
 let map = new google.maps.Map(document.getElementById("map"), {
   center: { lat: 55.600039, lng: 13.0489 },
@@ -262,8 +246,6 @@ let map = new google.maps.Map(document.getElementById("map"), {
 
 let icon = {
   url: "./img/mapmarker.svg",
-  //     "https://www.stigbertils.com/wp-content/uploads/2020/01/kisspng-google-map-maker-google-maps-computer-icons-map-co-map-marker-5ac6446cec2341.4312359915229430849672.png",
-  //   scaledSize: new google.maps.Size(50, 50),
 };
 let marker = new google.maps.Marker({
   position: { lat: 55.60212, lng: 13.04848 },
@@ -271,7 +253,7 @@ let marker = new google.maps.Marker({
   icon: icon,
 });
 
-// -----------------------------------------------email
+// -----------------------------------------------------------------------------------emailvalidation
 
 $(function () {
   $("form[name='form']").validate({

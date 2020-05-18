@@ -3,12 +3,9 @@ body {
   height: 100vh;
 }
 
-main {
+header {
   max-width: 1600px;
   margin: auto;
-}
-
-header {
   padding: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20,7 +17,6 @@ header {
   background-image: url(/img/headerbackground.png), linear-gradient(225deg, #7e5aff 16.9%, #55b7ff 83.27%);
   background-size: cover;
   min-height: 800px;
-  height: 100%;
 }
 
 .navigation {
@@ -30,7 +26,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  max-width: 1170px;
 }
 
 .logo {
@@ -61,8 +57,6 @@ li {
 
 li:hover {
   list-style-type: disc;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .linkname {
@@ -73,7 +67,12 @@ li:hover {
   line-height: 18px;
   color: #ffffff;
   text-decoration: none;
-  vertical-align: center;
+}
+
+.link:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: white;
 }
 
 .logo-container {
@@ -152,10 +151,24 @@ li:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+}
+
+#slick-slide-control00,
+#slick-slide-control01,
+#slick-slide-control02,
+#slick-slide-control03,
+#slick-slide-control04,
+#slick-slide-control05 {
+  color: transparent;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
 .item {
   text-align: center;
+  height: 140px;
 }
 
 .mainheading {
@@ -193,6 +206,11 @@ li:hover {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+main {
+  max-width: 1600px;
+  margin: auto;
 }
 
 .project {
@@ -255,7 +273,6 @@ li:hover {
 
 .section-heading__white {
   color: white;
-  margin-bottom: 89px;
 }
 
 .projectbox {
@@ -421,7 +438,7 @@ h3 {
           flex-direction: column;
 }
 
-#section {
+.card-container {
   margin: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -436,7 +453,7 @@ h3 {
           box-sizing: border-box;
 }
 
-#slider-container {
+.news-slider {
   margin: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -447,22 +464,99 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1200px;
+  max-width: 1300px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.slide-arrow.prev-arrow.slick-arrow {
+  display: block;
+  position: absolute;
+  background-color: transparent;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border: solid 1px;
+  border-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 50%;
+  left: -60px;
+}
+
+.slide-arrow.next-arrow.slick-arrow {
+  display: block;
+  position: absolute;
+  background-color: transparent;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border: solid 1px;
+  border-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 50%;
+  right: -60px;
+}
+
+.slide-arrow:hover,
+.slick-arrow:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: white;
+}
+
+.slick-dots ul {
+  width: 210px;
+  height: 100px;
+  background-color: pink;
+}
+
+.slick-dots li button {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  border: 1px solid white;
+  outline: 0;
+  text-indent: -9999;
+  outline: 0;
+}
+
+.slick-dots li button:hover {
+  background-color: white;
+}
+
+.slick-dots li button:hover:focus {
+  text-decoration: underline;
 }
 
 .content {
-  text-align: center;
-  padding-bottom: 30px;
-  width: 370px;
-  margin: 30px;
-  background-color: white;
-  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 60px 30px;
+  max-width: 370px;
+  height: 514px;
 }
 
 .card-img {
-  height: 50%;
+  width: 370px;
+  height: 240px;
   margin: 0px;
 }
 
@@ -484,7 +578,7 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 30px 20px;
+  padding: 30px 20px 0px 20px;
 }
 
 .card-title {
@@ -650,18 +744,20 @@ h3 {
 }
 
 .contact-wrapper {
-  padding: 60px 60px 60px 69px;
+  padding: 60px 60px 69px 60px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: absolute;
   top: 400px;
   background-image: url(/img/contactbackground.png);
   background-repeat: no-repeat;
   background-position: bottom;
   background-color: white;
-  width: 770px;
-  height: 450px;
-  -webkit-box-shadow: 0px -4px 30px rgba(133, 133, 133, 0.2);
-          box-shadow: 0px -4px 30px rgba(133, 133, 133, 0.2);
-  bottom: 0;
+  max-width: 770px;
+  width: 100%;
+  min-height: 450px;
+  -webkit-box-shadow: 0px -4px 30px #85858533;
+          box-shadow: 0px -4px 30px #85858533;
 }
 
 .contact-info {
@@ -676,6 +772,7 @@ h3 {
 }
 
 .contact-left {
+  min-width: 286px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -683,8 +780,6 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 40px;
-  width: 50%;
 }
 
 .contact-icon {
@@ -707,6 +802,10 @@ h3 {
           transform: scale(1.1);
 }
 
+.contact-right {
+  width: 310px;
+}
+
 form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -715,10 +814,10 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 310px;
 }
 
 input {
-  width: 385px;
   border: none;
   border-bottom: 1px solid rgba(75, 98, 82, 0.5);
   color: black;
@@ -761,6 +860,11 @@ form .error {
   font-family: "Montserrat", sans-serif;
 }
 
+input.error {
+  color: rgba(75, 98, 82, 0.5);
+  text-decoration: line-through;
+}
+
 .button__submit {
   width: 140px;
   -ms-flex-item-align: end;
@@ -770,7 +874,8 @@ form .error {
 }
 
 footer {
-  width: 1600px;
+  max-width: 1600px;
+  margin: auto;
   height: 549px;
   background-image: url(/img/footerbackground.png), linear-gradient(225deg, #7e5aff -2.19%, #55b7ff 103.21%);
   -webkit-box-pack: center;
