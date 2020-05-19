@@ -2,10 +2,9 @@
 
 $(document).ready(function () {
   $(".slick-content").slick({
-    // infinite: false,
+    infinite: true,
     autoplay: true,
     autoplaySpeed: 4000,
-    speed: 1000,
     slidesToScroll: 1,
     dots: true,
     arrows: false,
@@ -23,8 +22,7 @@ $(document).ready(function () {
     dots: true,
     autoplay: true,
     autoplaySpeed: 4000,
-    speed: 1000,
-    infinite: false,
+    infinite: true,
     prevArrow:
       '<span class="slide-arrow prev-arrow"><i class="fas fa-angle-left"></i></span>',
     nextArrow:
@@ -264,7 +262,6 @@ $(function () {
       name: "required",
       email: {
         required: true,
-
         email: true,
       },
     },

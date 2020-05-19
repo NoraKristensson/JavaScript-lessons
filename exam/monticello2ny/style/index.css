@@ -68,7 +68,7 @@ header {
 .link {
   list-style-type: circle;
   font-size: 30px;
-  color: white;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -85,7 +85,7 @@ header {
 .link:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  color: white;
+  color: #ffffff;
 }
 
 .logo-container {
@@ -123,7 +123,7 @@ header {
 
 .fab,
 .fas {
-  color: white;
+  color: #ffffff;
 }
 
 .fab:hover,
@@ -196,20 +196,21 @@ header {
   border: none;
   padding: 0px;
   font-size: 0px;
-  border: 1px solid white;
+  border: 1px solid #ffffff;
   border-radius: 50%;
   width: 10px !important;
   height: 10px;
+  outline: none;
   list-style: none;
   cursor: pointer;
 }
 
 .slick-content ul li button:hover, .slick-content ul li button:focus {
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .slick-dots li.slick-active {
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 50%;
   width: 10px;
   height: 10px;
@@ -274,7 +275,7 @@ main {
           flex-direction: column;
   margin-bottom: 140px;
   max-height: 1367px;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .title {
@@ -304,7 +305,7 @@ main {
 }
 
 .line__white {
-  border: 1px solid white;
+  border: 1px solid #ffffff;
 }
 
 .section-heading {
@@ -321,7 +322,7 @@ main {
 }
 
 .section-heading__white {
-  color: white;
+  color: #ffffff;
 }
 
 .projectbox {
@@ -435,7 +436,7 @@ h3 {
   line-height: 17px;
   color: #000000;
   outline: none;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .button__project {
@@ -581,7 +582,7 @@ h3 {
 .slick-arrow:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  color: white;
+  color: #ffffff;
 }
 
 .news-slider ul {
@@ -603,7 +604,7 @@ h3 {
   border: none;
   padding: 0px;
   font-size: 0px;
-  border: 1px solid white;
+  border: 1px solid #ffffff;
   border-radius: 50%;
   width: 10px !important;
   height: 10px;
@@ -611,7 +612,7 @@ h3 {
 }
 
 .news-slider ul li button:hover, .news-slider ul li button:focus {
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .content {
@@ -629,7 +630,7 @@ h3 {
 }
 
 .card-info {
-  background-color: white;
+  background-color: #ffffff;
   margin-top: 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -820,7 +821,7 @@ h3 {
   background-image: url(/img/contactbackground.png);
   background-repeat: no-repeat;
   background-position: bottom;
-  background-color: white;
+  background-color: #ffffff;
   max-width: 770px;
   width: 100%;
   min-height: 450px;

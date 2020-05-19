@@ -2,6 +2,7 @@ $sans: "Source Sans Pro", sans-serif;
 $montserrrat: "Montserrat", sans-serif;
 $dark: #2c4058;
 $open: "Open Sans", sans-serif;
+$white: #ffffff;
 
 @mixin links {
   font-family: $sans;
@@ -9,7 +10,7 @@ $open: "Open Sans", sans-serif;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
-  color: #ffffff;
+  color: $white;
 }
 
 @mixin mainheading {
@@ -19,7 +20,7 @@ $open: "Open Sans", sans-serif;
   font-size: 80px;
   line-height: 98px;
   letter-spacing: 0.1em;
-  color: #ffffff;
+  color: $white;
   text-align: center;
   margin-left: 75px;
   margin-top: 20px;
@@ -124,14 +125,14 @@ body {
   margin: 0 auto;
 }
 
+// --------------------------------------------------------------------------------HEADER
+
 header {
-  // margin: 0 auto;
   margin-bottom: 100px;
   min-height: 800px;
   background-image: url(/img/headerbackground.png),
     linear-gradient(225deg, #7e5aff 16.9%, #55b7ff 83.27%);
   background-size: cover;
-
   margin: 100;
 }
 
@@ -141,9 +142,6 @@ header {
   align-items: center;
   flex-direction: column;
   padding: 50px;
-
-  //   flex-direction: column;
-  //   box-sizing: border-box;
 }
 
 .navigation {
@@ -161,38 +159,25 @@ header {
   @include flex(space-between, flex-start);
   min-width: 515px;
   box-sizing: border-box;
-  // padding-inline-start: 60px;
   margin-block-start: 10px;
-
   cursor: pointer;
 }
 
 .link {
   list-style-type: circle;
   font-size: 30px;
-  color: white;
+  color: $white;
   text-align: center;
-
-  //   display: flex;
-  //   align-items: center;
-  //   flex-direction: column;
 }
-
-// .link:hover {
-//   list-style-type: disc;
-//   //   transform: scale(1.1);
-// }
 
 .linkname {
   @include links();
   text-decoration: none;
-
-  //   vertical-align: center;
 }
 
 .link:hover {
   transform: scale(1.1);
-  color: white;
+  color: $white;
 }
 
 .logo-container {
@@ -209,14 +194,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  // margin-left: 20px;
-
   text-decoration: none;
 }
 
 .fab,
 .fas {
-  color: white;
+  color: $white;
 }
 
 .fab:hover,
@@ -227,8 +210,6 @@ header {
 
 .main-section {
   box-sizing: border-box;
-  //   align-self: center;
-  //   margin: auto;
   @include flex(center, center);
   width: 100%;
   margin: auto;
@@ -263,92 +244,34 @@ header {
   border: none;
   padding: 0px;
   font-size: 0px;
-  border: 1px solid white;
+  border: 1px solid$white;
   border-radius: 50%;
   width: 10px !important;
   height: 10px;
+  outline: none;
   list-style: none;
   cursor: pointer;
   &:hover,
   &:focus {
-    background-color: white;
-    // color: black;
-    // background-color: red;
+    background-color: $white;
   }
 }
 
-// li {
-//   width: 10px !important;
-//   height: 10px;
-// }
-
-// .slick-dots li button {
-//   border-radius: 50%;
-//   // border: none;
-//   border: 1px solid blue;
-//   // width: 10px;
-//   // height: 10px;
-//   background-color: blue;
-//   color: transparent;
-
-//   text-indent: -9999px;
-//   outline: 0;
-//   font-size: 0;
-
-//   &:hover {
-//     background-color: white;
-//   }
-
-//   // &:focus {
-//   //   transform: scale(1.5);
-//   //   transition: all 0.3s ease 0s;
-//   // }
-// }
 .slick-dots li.slick-active {
-  background-color: white;
+  background-color: $white;
   border-radius: 50%;
   width: 10px;
   height: 10px;
 }
-
-// // .slick-dots
-// li.slick-active {
-//   background-color: white;
-//   border-radius: 50%;
-//   width: 10px !important;
-//   max-height: 10px;
-//   // margin-top: 15px;
-// }
-
-// #slick-slide-control00,
-// #slick-slide-control01,
-// #slick-slide-control02,
-// #slick-slide-control03,
-// #slick-slide-control04,
-// #slick-slide-control05 {
-//   color: transparent;
-//   background-color: transparent;
-//   border: none;
-//   outline: none;
-// }
 
 .item {
   text-align: center;
   height: 140px;
 }
 
-// .item {
-//   width: 917px;
-//   //   height: 422px !important no-repeat;
-
-//   //   position: relative;
-// }
-
 .mainheading {
   @include mainheading();
-  // margin-block-start: 0px;
   margin-block-end: 0px;
-  // margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
 
@@ -358,8 +281,7 @@ header {
   font-weight: normal;
   font-size: 18px;
   line-height: 22px;
-
-  color: #ffffff;
+  color: $white;
   margin-top: 22px;
   text-align: center;
   letter-spacing: 8px;
@@ -370,7 +292,7 @@ header {
   align-self: center;
 }
 
-// --------------------------------------------------------------------------------mainpage
+// --------------------------------------------------------------------------------maincontent
 main {
   max-width: 1600px;
   margin: auto;
@@ -382,10 +304,7 @@ main {
   flex-direction: column;
   margin-bottom: 140px;
   max-height: 1367px;
-  // padding-top: 97px;
-  // height: 100vh;
-  // width: 100%;
-  background-color: white;
+  background-color: $white;
 }
 
 .title {
@@ -404,7 +323,7 @@ main {
 }
 
 .line__white {
-  border: 1px solid white;
+  border: 1px solid $white;
 }
 
 .section-heading {
@@ -419,15 +338,13 @@ main {
 }
 
 .section-heading__white {
-  color: white;
-  //   margin-bottom: 89px;
+  color: $white;
 }
 
 .projectbox {
   width: 1385px;
   height: 527px;
   display: flex;
-  // justify-self: flex-start;
   margin-top: 89px;
 }
 .projectbox__2 {
@@ -467,7 +384,6 @@ main {
   box-sizing: border-box;
   min-width: 480px;
   min-height: 375px;
-  // width: 100%;
   margin-left: 70px;
   align-self: flex-end;
 }
@@ -506,12 +422,11 @@ h3 {
   line-height: 17px;
   color: #000000;
   outline: none;
-  background-color: white;
+  background-color: $white;
 }
 
 .button__project {
   margin-top: 30px;
-
   margin-left: 5px;
 }
 
@@ -550,42 +465,11 @@ h3 {
   margin-bottom: 140px;
 }
 
-// .card-container {
-// 	margin: auto;
-// 	@include flex(center, center);
-// 	box-sizing: border-box;
-// 	// 	flex-direction: column;
-// }
-
-// .news-slider {
-// 	margin: auto;
-// 	@include flex(center, center);
-// 	max-width: 1200px;
-// 	// box-sizing: border-box;
-// 	// border: solid yellow 1px;
-// 	// 	// height: 514px;
-
-// 	// 	box-sizing: border-box;
-// }
-
-// .card {
-// 	// border: solid red 1px;
-// 	text-align: center;
-// 	padding-bottom: 30px;
-// 	// max-width: 370px;
-// 	// 	height: 514px;
-// 	// box-sizing: border-box;
-// 	// margin: 60px;
-// 	margin-right: 30px;
-// }
-
 .card-container {
   margin: auto;
   @include flex(center, center);
   box-sizing: border-box;
   margin-top: 90px;
-  // flex-direction: row-reverse;
-  // detta lägger prickarna till höger
 }
 
 .news-slider {
@@ -610,70 +494,50 @@ h3 {
 .slide-arrow:hover,
 .slick-arrow:hover {
   transform: scale(1.1);
-  color: white;
+  color: $white;
 }
 
 .news-slider ul {
   height: 10px;
   width: 230px;
-  // margin: 0px;
-  // margin-top: 5px;
-  // margin-right: -11px;
   justify-content: space-between;
   display: flex !important;
-  // flex-direction: column;
   padding: 0px;
   background-color: transparent;
 }
 
-// .slick-dots li {
-//   height: 10px;
-//   width: 10px;
-// }
-
-// .slick-dots li button:before {
-//   width: 10px;
-//   height: 10px;
-// }
 .news-slider ul li button {
   background-color: transparent;
   color: transparent;
   border: none;
   padding: 0px;
   font-size: 0px;
-  border: 1px solid white;
+  border: 1px solid $white;
   border-radius: 50%;
   width: 10px !important;
   height: 10px;
   cursor: pointer;
   &:hover,
   &:focus {
-    background-color: white;
+    background-color: $white;
   }
 }
 
 .content {
-  //   text-align: center;
-  //   padding-bottom: 30px;
-  //
   box-sizing: border-box;
   margin: 0px 15px 60px 15px;
-  //   background-color: white;
-
   max-width: 370px;
   height: 514px;
 }
 
 .card-img {
-  // height: 240px;
   width: 370px;
   height: 240px;
-
   margin: 0px;
 }
 
 .card-info {
-  background-color: white;
+  background-color: $white;
   margin-top: 0px;
   box-sizing: border-box;
   @include flex(center, flex-start);
@@ -718,7 +582,7 @@ h3 {
   @include date();
 }
 
-// -----------------------------------------gallery
+// ------------------------------------------------------------------------------------gallery
 
 .gallery {
   height: 721px;
@@ -727,11 +591,6 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
-  // padding: 140px 215px;
 }
 
 .gallery-wrapper {
@@ -746,7 +605,6 @@ h3 {
 .gallery-container {
   display: grid;
   grid-template-columns: 1fr repeat(2, 285px);
-  // grid-template-rows: repeat(1, 580px);
   grid-gap: 10px;
 }
 
@@ -765,7 +623,7 @@ h3 {
 .gallery4 {
   grid-area: 2 / 3 / 3 / 4;
 }
-// --------------------------------------contact
+// --------------------------------------------------------------------------------------contact
 
 .contact {
   @include just(center);
@@ -784,23 +642,12 @@ h3 {
   background-image: url(/img/contactbackground.png);
   background-repeat: no-repeat;
   background-position: bottom;
-  background-color: white;
-  //   background-size: fill;
+  background-color: $white;
   max-width: 770px;
   width: 100%;
   min-height: 450px;
   box-shadow: 0px -4px 30px #85858533;
 }
-
-// .img-contact {
-//   position: absolute;
-//   top: 653px;
-//   background-image: url(/img/contactbackground.png);
-//   background-repeat: no-repeat;
-//   background-position: bottom;
-//   width: 770px;
-//   height: 197.4px;
-// }
 
 .contact-info {
   display: flex;
@@ -847,7 +694,6 @@ form {
 }
 
 input {
-  //   width: 385px;
   border: none;
   border-bottom: 1px solid rgba(75, 98, 82, 0.5);
   color: black;
@@ -891,12 +737,11 @@ input.error {
   background-color: transparent;
   margin-top: 30px;
 }
-// -------------------------------------------footer
+// -----------------------------------------------------------------------------------------footer
 
 footer {
   max-width: 1600px;
   margin: auto;
-  //   width: 1600px;
   height: 549px;
   background-image: url(/img/footerbackground.png),
     linear-gradient(225deg, #7e5aff -2.19%, #55b7ff 103.21%);
@@ -906,7 +751,6 @@ footer {
 
 .footer-content {
   width: 770px;
-  // padding-top: 204px;
 }
 
 .top {
@@ -919,7 +763,7 @@ footer {
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
-  color: #ffffff;
+  color: $white;
   text-align: left;
   margin-top: 41px;
 }
