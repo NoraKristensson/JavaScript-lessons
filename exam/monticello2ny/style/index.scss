@@ -21,6 +21,8 @@ $open: "Open Sans", sans-serif;
   letter-spacing: 0.1em;
   color: #ffffff;
   text-align: center;
+  margin-left: 75px;
+  margin-top: 20px;
 }
 
 @mixin title {
@@ -117,23 +119,37 @@ body {
   height: 100vh;
 }
 
-header {
+.page {
   max-width: 1600px;
-  margin: auto;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
+  margin: 0 auto;
+}
+
+header {
+  // margin: 0 auto;
+  margin-bottom: 100px;
+  min-height: 800px;
   background-image: url(/img/headerbackground.png),
     linear-gradient(225deg, #7e5aff 16.9%, #55b7ff 83.27%);
   background-size: cover;
-  min-height: 800px;
-  //   height: 100%;
-  //   width: 100%;
+
+  margin: 100;
+}
+
+.header-content {
+  height: 700px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+
+  //   flex-direction: column;
+  //   box-sizing: border-box;
 }
 
 .navigation {
   @include just(space-between);
   max-width: 1170px;
+  width: 100%;
 }
 
 .logo {
@@ -144,6 +160,9 @@ header {
 .navigationlink {
   @include flex(space-between, flex-start);
   min-width: 515px;
+  box-sizing: border-box;
+  // padding-inline-start: 60px;
+  margin-block-start: 10px;
 
   cursor: pointer;
 }
@@ -177,8 +196,8 @@ li:hover {
 }
 
 .logo-container {
-  width: 180px;
-  @include flex(space-evenly, center);
+  width: 160px;
+  @include flex(space-between, center);
 }
 .logotag {
   width: 40px;
@@ -190,7 +209,7 @@ li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 20px;
+  // margin-left: 20px;
 
   text-decoration: none;
 }
@@ -252,9 +271,9 @@ li:hover {
 
 .mainheading {
   @include mainheading();
-  margin-block-start: 0px;
+  // margin-block-start: 0px;
   margin-block-end: 0px;
-  margin-inline-start: 0px;
+  // margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
 
@@ -264,10 +283,12 @@ li:hover {
   font-weight: normal;
   font-size: 18px;
   line-height: 22px;
-  letter-spacing: 0.3em;
+
   color: #ffffff;
-  margin-top: 20px;
+  margin-top: 22px;
   text-align: center;
+  letter-spacing: 8px;
+  margin-left: 80px;
 }
 
 .button-section {
@@ -285,9 +306,11 @@ main {
   @include just(flex-start);
   flex-direction: column;
   margin-bottom: 140px;
-  padding-top: 100px;
+  max-height: 1367px;
+  // padding-top: 97px;
   // height: 100vh;
   // width: 100%;
+  background-color: white;
 }
 
 .title {
@@ -334,6 +357,7 @@ main {
 }
 .projectbox__2 {
   align-self: flex-end;
+  margin-top: 140px;
 }
 
 .img-container {
@@ -366,8 +390,8 @@ main {
 
 .text-container {
   box-sizing: border-box;
-  min-width: 470px;
-  min-height: 351px;
+  min-width: 480px;
+  min-height: 375px;
   // width: 100%;
   margin-left: 70px;
   align-self: flex-end;
@@ -376,6 +400,7 @@ main {
 .text-container__2 {
   margin-right: 64px;
   margin-left: 0px;
+  max-height: 350px;
 }
 
 h3 {
@@ -390,6 +415,10 @@ h3 {
   margin-top: 19px;
 }
 
+.text__project {
+  line-height: 30px;
+}
+
 .button {
   width: 190px;
   height: 50px;
@@ -402,11 +431,13 @@ h3 {
   line-height: 17px;
   color: #000000;
   outline: none;
+  background-color: white;
 }
 
 .button__project {
-  margin-top: 41px;
-  outline: none;
+  margin-top: 30px;
+
+  margin-left: 5px;
 }
 
 .button:hover {
@@ -441,6 +472,7 @@ h3 {
   @include flex(center, center);
   box-sizing: border-box;
   flex-direction: column;
+  margin-bottom: 140px;
 }
 
 // .card-container {
@@ -476,6 +508,7 @@ h3 {
   margin: auto;
   @include flex(center, center);
   box-sizing: border-box;
+  margin-top: 90px;
   // flex-direction: row-reverse;
   // detta lägger prickarna till höger
 }
@@ -483,8 +516,9 @@ h3 {
 .news-slider {
   margin: auto;
   @include flex(center, center);
-  max-width: 1300px;
+  max-width: 1200px;
   box-sizing: border-box;
+  flex-direction: row-reverse;
 }
 
 .slide-arrow.prev-arrow.slick-arrow {
@@ -531,7 +565,7 @@ h3 {
   //   padding-bottom: 30px;
   //
   box-sizing: border-box;
-  margin: 60px 30px;
+  margin: 0px 15px 60px 15px;
   //   background-color: white;
 
   max-width: 370px;
@@ -553,6 +587,7 @@ h3 {
   @include flex(center, flex-start);
   flex-direction: column;
   padding: 30px 20px 0px 20px;
+  width: 370px;
 }
 
 .card-title {
@@ -594,17 +629,22 @@ h3 {
 // -----------------------------------------gallery
 
 .gallery {
-  height: 1001px;
+  height: 721px;
+  margin-bottom: 139px;
+  justify-content: space-between;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 140px 215px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  // padding: 140px 215px;
 }
 
 .gallery-wrapper {
   width: 1170px;
-  height: 721px;
+  min-height: 548px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -616,7 +656,6 @@ h3 {
   grid-template-columns: 1fr repeat(2, 285px);
   // grid-template-rows: repeat(1, 580px);
   grid-gap: 10px;
-  margin-top: 30px;
 }
 
 .gallery-big {
@@ -646,7 +685,7 @@ h3 {
   height: 700px;
 }
 .contact-wrapper {
-  padding: 60px 60px 69px 60px;
+  padding: 60px 60px 69px 57px;
   box-sizing: border-box;
   position: absolute;
   top: 400px;
@@ -674,25 +713,31 @@ h3 {
 .contact-info {
   display: flex;
   justify-content: space-between;
-  margin-top: 42px;
-
-  z-index: 1;
+  margin-top: 25px;
 }
 
 .contact-left {
-  min-width: 286px;
+  min-width: 290px;
+  height: 205px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .contact-icon {
   width: 10px;
   color: #7e5aff;
+  margin-right: 10px;
+}
+
+.fa-inbox {
   margin-right: 15px;
 }
 
 .contact-text {
   @include text-montserrat();
+  margin-block-start: 14px;
+  margin-block-end: 14px;
 }
 
 .contact-text:hover {
@@ -719,12 +764,18 @@ input {
   font-family: $montserrrat;
   font-size: 18px;
   padding-bottom: 14px;
-  margin-top: 33px;
+  margin-top: 20px;
+}
+
+#email {
+  margin-top: 35px;
+  padding-bottom: 18px;
 }
 
 input::placeholder {
   color: rgba(75, 98, 82, 0.5);
   font-weight: 400;
+  margin-bottom: 20px;
 }
 input:focus {
   outline: none;
@@ -759,12 +810,11 @@ footer {
     linear-gradient(225deg, #7e5aff -2.19%, #55b7ff 103.21%);
   @include flex(center, center);
   flex-direction: column;
-  border: 1px yellowgreen solid;
 }
 
 .footer-content {
   width: 770px;
-  padding-top: 204px;
+  // padding-top: 204px;
 }
 
 .top {
