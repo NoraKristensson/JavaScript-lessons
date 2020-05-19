@@ -111,8 +111,8 @@ $open: "Open Sans", sans-serif;
   align-items: center;
 }
 
-// ----------------------------------------STYLE
-// ----------------------------------------STYLE
+// --------------------------------------------------------------------------------STYLE
+// --------------------------------------------------------------------------------STYLE
 
 body {
   width: 100vw;
@@ -240,22 +240,40 @@ li:hover {
   width: 100%;
 }
 
-// .slick-active .button {
-//   color: red;
-//   background-color: red;
-// }
-
-#slick-slide-control00,
-#slick-slide-control01,
-#slick-slide-control02,
-#slick-slide-control03,
-#slick-slide-control04,
-#slick-slide-control05 {
-  color: transparent;
-  background-color: transparent;
-  border: none;
-  outline: none;
+.slick-content ul {
+  height: 238px;
+  margin: 0px;
+  margin-top: 5px;
+  margin-right: -11px;
+  justify-content: space-between;
+  display: flex !important;
+  flex-direction: column;
+  padding: 0px;
 }
+
+.slick-content ul li button {
+  background-color: transparent;
+  color: transparent;
+  border: none;
+  padding: 0px;
+  font-size: 0px;
+
+  // color: black;
+  // background-color: red;
+  // list-style: none;
+}
+
+// #slick-slide-control00,
+// #slick-slide-control01,
+// #slick-slide-control02,
+// #slick-slide-control03,
+// #slick-slide-control04,
+// #slick-slide-control05 {
+//   color: transparent;
+//   background-color: transparent;
+//   border: none;
+//   outline: none;
+// }
 
 .item {
   text-align: center;
@@ -538,25 +556,40 @@ h3 {
   color: white;
 }
 
-.slick-dots ul {
-  width: 210px;
-  height: 100px;
-  background-color: pink;
+.news-slider ul {
+  height: 10px;
+  width: 230px;
+  // margin: 0px;
+  // margin-top: 5px;
+  // margin-right: -11px;
+  justify-content: space-between;
+  display: flex !important;
+  // flex-direction: column;
+  padding: 0px;
+  background-color: transparent;
 }
 
-.slick-dots li button {
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
+// .slick-dots li {
+//   height: 10px;
+//   width: 10px;
+// }
+
+// .slick-dots li button:before {
+//   width: 10px;
+//   height: 10px;
+// }
+.news-slider ul li button {
+  background-color: transparent;
+  color: transparent;
+  border: none;
+  padding: 0px;
+  font-size: 0px;
   border: 1px solid white;
-  outline: 0;
-  text-indent: -9999;
-  outline: 0;
+  border-radius: 50%;
+  width: 10px !important;
+  height: 10px;
   &:hover {
     background-color: white;
-    &:focus {
-      text-decoration: underline;
-    }
   }
 }
 
