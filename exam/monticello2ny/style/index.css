@@ -65,15 +65,11 @@ header {
   cursor: pointer;
 }
 
-li {
+.link {
   list-style-type: circle;
   font-size: 30px;
   color: white;
   text-align: center;
-}
-
-li:hover {
-  list-style-type: disc;
 }
 
 .linkname {
@@ -186,6 +182,12 @@ li:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0px;
+  list-style: none;
+}
+
+.slick-content ul li {
+  width: 10px !important;
+  max-height: 10px;
 }
 
 .slick-content ul li button {
@@ -194,6 +196,23 @@ li:hover {
   border: none;
   padding: 0px;
   font-size: 0px;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 10px !important;
+  height: 10px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.slick-content ul li button:hover, .slick-content ul li button:focus {
+  background-color: white;
+}
+
+.slick-dots li.slick-active {
+  background-color: white;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
 }
 
 .item {
@@ -588,9 +607,10 @@ h3 {
   border-radius: 50%;
   width: 10px !important;
   height: 10px;
+  cursor: pointer;
 }
 
-.news-slider ul li button:hover {
+.news-slider ul li button:hover, .news-slider ul li button:focus {
   background-color: white;
 }
 

@@ -167,7 +167,7 @@ header {
   cursor: pointer;
 }
 
-li {
+.link {
   list-style-type: circle;
   font-size: 30px;
   color: white;
@@ -178,10 +178,10 @@ li {
   //   flex-direction: column;
 }
 
-li:hover {
-  list-style-type: disc;
-  //   transform: scale(1.1);
-}
+// .link:hover {
+//   list-style-type: disc;
+//   //   transform: scale(1.1);
+// }
 
 .linkname {
   @include links();
@@ -249,6 +249,12 @@ li:hover {
   display: flex !important;
   flex-direction: column;
   padding: 0px;
+  list-style: none;
+}
+
+.slick-content ul li {
+  width: 10px !important;
+  max-height: 10px;
 }
 
 .slick-content ul li button {
@@ -257,11 +263,62 @@ li:hover {
   border: none;
   padding: 0px;
   font-size: 0px;
-
-  // color: black;
-  // background-color: red;
-  // list-style: none;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 10px !important;
+  height: 10px;
+  list-style: none;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: white;
+    // color: black;
+    // background-color: red;
+  }
 }
+
+// li {
+//   width: 10px !important;
+//   height: 10px;
+// }
+
+// .slick-dots li button {
+//   border-radius: 50%;
+//   // border: none;
+//   border: 1px solid blue;
+//   // width: 10px;
+//   // height: 10px;
+//   background-color: blue;
+//   color: transparent;
+
+//   text-indent: -9999px;
+//   outline: 0;
+//   font-size: 0;
+
+//   &:hover {
+//     background-color: white;
+//   }
+
+//   // &:focus {
+//   //   transform: scale(1.5);
+//   //   transition: all 0.3s ease 0s;
+//   // }
+// }
+.slick-dots li.slick-active {
+  background-color: white;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+// // .slick-dots
+// li.slick-active {
+//   background-color: white;
+//   border-radius: 50%;
+//   width: 10px !important;
+//   max-height: 10px;
+//   // margin-top: 15px;
+// }
 
 // #slick-slide-control00,
 // #slick-slide-control01,
@@ -313,12 +370,12 @@ li:hover {
   align-self: center;
 }
 
-// ----------------------------------------------mainpage
+// --------------------------------------------------------------------------------mainpage
 main {
   max-width: 1600px;
   margin: auto;
 }
-// -----------------------------------------------project
+// ---------------------------------------------------------------------------------project
 
 .project {
   @include just(flex-start);
@@ -588,7 +645,9 @@ h3 {
   border-radius: 50%;
   width: 10px !important;
   height: 10px;
-  &:hover {
+  cursor: pointer;
+  &:hover,
+  &:focus {
     background-color: white;
   }
 }
