@@ -1,5 +1,3 @@
-// kolla smooth effekt
-
 $(document).ready(function () {
 	$('.main__slider').slick({
 		infinite: true,
@@ -10,7 +8,8 @@ $(document).ready(function () {
 		arrows: false,
 		vertical: true,
 		verticalSwiping: true,
-		dotsClass: $(this).toggleClass('rotate-90'),
+		// dotsClass: $(this).toggleClass('rotate-90'),
+		// dotsClass: 'vertical-dots',
 	});
 });
 
@@ -20,8 +19,8 @@ $(document).ready(function () {
 		slidesToScroll: 1,
 		arrows: true,
 		dots: true,
-		// autoplay: true,
-		// autoplaySpeed: 4000,
+		autoplay: true,
+		autoplaySpeed: 4000,
 		infinite: true,
 		prevArrow:
 			'<span class="slide-arrow prev-arrow"><i class="fas fa-angle-left logos__icon"></i></span>',
@@ -31,6 +30,7 @@ $(document).ready(function () {
 });
 
 //  ----------------------------------------------------------------------------------------- smoothe scroll
+
 $('.navigation__linkname').on('click', function (e) {
 	e.preventDefault();
 	$('html, body').animate(
