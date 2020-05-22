@@ -430,6 +430,7 @@ h3 {
   color: #000000;
   outline: none;
   background-color: #ffffff;
+  cursor: pointer;
 }
 
 .button--project {

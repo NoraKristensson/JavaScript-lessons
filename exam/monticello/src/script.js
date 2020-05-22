@@ -1,15 +1,14 @@
 $(document).ready(function () {
 	$('.main__slider').slick({
 		infinite: true,
-		autoplay: true,
-		autoplaySpeed: 4000,
+		// autoplay: true,
+		// autoplaySpeed: 4000,
 		slidesToScroll: 1,
 		dots: true,
 		arrows: false,
 		vertical: true,
 		verticalSwiping: true,
 		// dotsClass: $(this).toggleClass('rotate-90'),
-		// dotsClass: 'vertical-dots',
 	});
 });
 
@@ -256,7 +255,7 @@ let marker = new google.maps.Marker({
 
 // -----------------------------------------------------------------------------------emailvalidation
 
-$(function () {
+$(form).ready(function () {
 	$("form[name='form']").validate({
 		rules: {
 			name: 'required',
@@ -269,8 +268,16 @@ $(function () {
 			name: 'Please enter your name',
 			email: 'Please enter a valid email address',
 		},
+
 		submitHandler: function (form) {
-			form.submit();
+			$(form).ready(function () {
+				$('#btn-submit').click(function () {
+					return 'Thank you, we will contact you!';
+				});
+				$('#btn-submit').click(function (event) {
+					$('.contact__right').html(event.result);
+				});
+			});
 		},
 	});
 });
